@@ -110,13 +110,23 @@ footer > a > .icon-linkedin:hover {
 }
 
 @media (max-width: 1030px) {
-    footer {
+	.title {
+		font-size: 3rem;
+		margin-bottom: 2vh;
+	}
+	.box_title {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 575px) {
+	footer {
         position: relative;
 		margin-top: 1vh;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .icons {
         padding-bottom: 50px;
     }
