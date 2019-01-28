@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+    <title>Walidator PESEL by Tomasz Wysocki</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Walidator PESEL by Tomasz Wysocki">
+    <meta name="keywords" content="Tomasz,Wysocki,Walidator,numer,PESEL">
+    <meta name="author" content="Tomasz Wysocki">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/TW.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/fontello/css/fontello.css">
+<!--    <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>  -->
+</head>
+<body>
+<container>
+	<div class="title">
+		WALIDATOR PESEL
+	</div>
+	<div class="row center-xs">
+		<div class="col-sm-12 col-lg-8 box">
+			<div class="box_title">Sprawdź poprawność numeru PESEL</div>
+			<div class="pesel">Podaj numer PESEL: <input type="text" id="pesel" size="11" placeholder="Numer PESEL" oninput="this.value=this.value.slice(0,11)"></div>
+			<div class="result_box"></div>
+			<button class="btn" id="walidate">Sprawdź!</button>
+		</div>
+<!--		<div class="col-sm-12 col-lg-5 box">
+			<p class="box_title">Dopasuj numer PESEL</p>
+			<fieldset>
+				<legend>Płeć</legend>
+				<div class="plec"><label><input type="radio" name="plec" value="kobieta">Kobieta</label></div>
+				<div class="plec"><label><input type="radio" name="plec" value="mezczyzna">Mężczyzna</label></div>
+				<div class="plec"><label><input type="radio" name="plec" value="obojetne">Obojętne</label></div>
+			</fieldset>
+			<fieldset>
+				<legend>Data urodzenia</legend>
+				<div class="data">Rok: <input type="number" id="rok" value="1970" size="4" min="1800" max="2019" placeholder="1970" oninput="this.value=this.value.slice(0,4)"></div>
+				<div class="data">Miesiąc: <input type="number" value="01" size="4"  min="1" max="12" placeholder="01" oninput="this.value=this.value.slice(0,2)"></div>
+				<div class="data">Dzień: <input type="number" value="01" min="1" max="12" placeholder="01" oninput="this.value=this.value.slice(0,4)"></div>
+			</fieldset>
+			<button class="btn" id="generate_advanced">Generuj!</button>
+		</div>		-->
+		<!-- <button id="generate">Generuj!</button> -->
+	</div>
+	<footer>
+		Created by <a href="tomaszwysocki.pl">Tomasz Wysocki</a>
+		<a href="https://linkedin.com/in/tomasz-wysocki-95507a146" target="_blank"><i class="icon-linkedin social_media"></i></a>
+		<a href="https://github.com/TWys" target="_blank"><i class="icon-github-circled social_media"></i></a>
+	</footer>
+</container>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

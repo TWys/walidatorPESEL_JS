@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700&subset=latin-ext');
+
+body {
+	margin: 0;
+	background-color: white;
+	font-family: 'Amatic SC';
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+	color: black;
+    font-variant: small-caps;
+    text-align: center;
+    width: 50%;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+	font-family: 'Dosis', sans-serif;
+    width: 70vw;
+	margin-left: auto;
+	margin-right: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+	text-align: center;
+}
+
+.box {
+	border: solid 3px black;
+	margin: 5px 0;
+}
+
+.box_title {
+	font-size: 2rem;
+	font-weight: 500;
+	font-variant: small-caps;
+}
+
+.pesel {
+	margin: 10px 0;
+}
+
+.result_box {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	display: none;
+	margin: 10px 0;
+}
+
+
+input {
+	text-align: right;
+}
+
+.btn {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	background-color: white;
+	border: solid 3px black;
+	margin: 10px 0; 
+}
+
+footer {
+	width: 80vw;
+	background-color: lightgray;
+	color: black;
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	left: 10vw;
+	border: solid 3px black;
+
+}
+
+.social_media {
+    font-size: 20px;
+}
+
+
+footer > a {
+	color: black;
+	text-decoration: none;
+}
+
+footer > a:first-child {
+	font-weight: 700;
+}
+
+footer > a > .icon-github-circled{
+	color: black;
+}
+
+footer> a > .icon-github-circled:hover {
+    font-size: 25px;
+}
+
+footer > a > .icon-linkedin{
+	color: #0077B5;
+}
+
+footer > a > .icon-linkedin:hover {
+    font-size: 25px;
+}
+
+@media (max-width: 1030px) {
+    footer {
+        position: relative;
+		margin-top: 1vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .icons {
+        padding-bottom: 50px;
+    }
+}
