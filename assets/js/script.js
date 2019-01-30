@@ -9,14 +9,12 @@ function checkDate(d) {
 	// Utworzenie obiektu dzisiejszej daty i przeliczenie jej na Unix time
 	dzis = Date.parse(new Date); 
 	if (Date.parse(d) >= dzis) { // Sprawdzenie czy data z Peselu nie jest nowsza od daty dzisiejszej
-		wynik = 'Pesel nieprawidłowy';
-		printResult(wynik);
+		printResult(0);
 	} 
 	// Sprawdzenie czy przeliczenie daty z Peselu zapisanej w Unix time na format yyyy-mm-dd da taką samą datę jak ta podana w Peselu
 	// (przeliczenie daty z Unix time zawsze da poprawną datę)
 	else if ((data.getMonth()+1) != (d.charAt(5)*10+d.charAt(6))) {
-		wynik = 'Pesel nieprawidłowy';
-		printResult(wynik);
+		printResult(0);
 	}
 }
 
@@ -36,14 +34,12 @@ function walidateFunction() {
 
 
 	if (pesel.length != 11) {
-		wynik = "Pesel nieprawidłowy";
-		printResult(wynik);
+		printResult(0);
 		return;
 	}
 	
 	if (isNaN(parseInt(pesel,10))) {
-		wynik = "Pesel nieprawidłowy";
-		printResult(wynik);
+		printResult(0);
 		return;
 	}
 
@@ -57,26 +53,26 @@ function walidateFunction() {
 	}
 	
 	if (suma != pesel_tab[10]) {
-		wynik = "Pesel nieprawidłowy";
-		printResult(wynik);
+		printResult(0);
 		return;
 	}
 	
 	else {
-		wynik = "Pesel prawidłowy";
-		printResult(wynik);
+		printResult(1);
 	}
 
 }
 
-function printResult(wynik) {
-	result = wynik;
-	document.querySelector('.result_box').innerHTML = result;
-	document.querySelector('.result_box').style.display = "block";
-	if (result == 'Pesel nieprawidłowy') {
+function printResult(result) {
+	
+	if (result == 0) {
+		wynik = "Pesel nieprawidłowy";
 		document.querySelector('.result_box').style.color = "red";
 	}
-	else if (result == 'Pesel prawidłowy') {
+	else if (result == 1) {
+		wynik = "Pesel prawidłowy";
 		document.querySelector('.result_box').style.color = "green";
 	}
+	document.querySelector('.result_box').innerHTML = wynik;
+	document.querySelector('.result_box').style.display = "block";
 }
